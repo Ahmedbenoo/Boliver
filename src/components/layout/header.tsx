@@ -1,50 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { useTheme } from "next-themes";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
 import { LocaleSwitcher } from "@/components/shared/locale-switcher";
-import { siteConfig } from "@/lib/constants/site";
+import { BrandLogo } from "@/components/shared/brand-logo";
 import { Container } from "./container";
-import logoLight from "@/components/shared/logo2.png";
-import logoDark from "@/components/shared/logo3.png";
-
-const logoClassName =
-  "h-auto w-auto max-h-14 object-contain object-start md:max-h-11";
-
-function HeaderLogo() {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
-  const isDark = !mounted ? true : resolvedTheme === "dark";
-  const logoSrc = isDark ? logoDark : logoLight;
-
-  return (
-    <Link
-      href="/"
-      aria-label={`${siteConfig.name} home`}
-      className="justify-self-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-    >
-      <Image
-        src={logoSrc}
-        alt={siteConfig.name}
-        width={logoLight.width}
-        height={logoLight.height}
-        priority
-        sizes="(max-width: 768px) 180px, 220px"
-        className={logoClassName}
-      />
-    </Link>
-  );
-}
 
 const navItems = [
   { key: "services", href: "/services" },
@@ -84,7 +49,7 @@ export function Header() {
     >
       <Container>
         <div className="grid h-16 grid-cols-[auto_1fr_auto] items-center gap-4 md:h-20">
-          <HeaderLogo />
+          <BrandLogo size="md" priority className="justify-self-start" />
 
           <nav
             className="hidden items-center justify-center gap-6 lg:flex xl:gap-8"

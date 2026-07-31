@@ -1,14 +1,18 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 import { Link } from "@/i18n/navigation";
-import { LOGO_HEIGHT, LOGO_PATH, LOGO_WIDTH } from "@/lib/constants/logo";
 import { siteConfig } from "@/lib/constants/site";
 import { cn } from "@/lib/utils";
+import logoLight from "@/components/shared/logo2.png";
+import logoDark from "@/components/shared/logo3.png";
 
 const sizeMap = {
-  sm: 36,
-  md: 44,
-  lg: 56,
-  header: { mobile: 52, desktop: 68 },
+  sm: "max-h-9",
+  md: "max-h-14 object-start md:max-h-11",
+  lg: "max-h-14 object-start md:max-h-[4.5rem]",
 } as const;
 
 interface BrandLogoProps {
@@ -24,22 +28,23 @@ export function BrandLogo({
   priority = false,
   className,
 }: BrandLogoProps) {
-  const isHeader = size === "header";
-  const maxHeight = isHeader ? undefined : sizeMap[size];
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  const isDark = !mounted ? true : resolvedTheme === "dark";
+  const logoSrc = isDark ? logoDark : logoLight;
 
   const mark = (
     <Image
-      src={LOGO_PATH}
+      src={logoSrc}
       alt={siteConfig.name}
-      width={LOGO_WIDTH}
-      height={LOGO_HEIGHT}
+      width={logoLight.width}
+      height={logoLight.height}
       priority={priority}
-      className={cn(
-        "h-auto w-auto object-contain",
-        isHeader && "max-h-14 md:max-h-[4.5rem]",
-        className
-      )}
-      style={maxHeight ? { maxHeight, width: "auto" } : { width: "auto" }}
+      sizes="(max-width: 768px) 180px, 220px"
+      className={cn("h-auto w-auto object-contain", sizeMap[size], className)}
     />
   );
 

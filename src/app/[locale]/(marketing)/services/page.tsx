@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { getServices } from "@/lib/supabase/queries/services";
+import { getServices } from "@/lib/data/queries/services";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { routes } from "@/lib/constants/routes";
 import { PageHeader } from "@/components/layout/page-header";

@@ -21,8 +21,9 @@ export async function CtaSection() {
         <p className="mx-auto mt-4 max-w-xl text-lg text-muted">{t("description")}</p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <Button size="lg" asChild>
-            <Link href="/book-consultation">
-              {tc("bookFreeConsultation")} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+            <Link href="/book-consultation" className="inline-flex items-center gap-2">
+              <span>{tc("bookFreeConsultation")}</span>
+              <ArrowRight className="h-4 w-4 shrink-0 rtl:rotate-180" aria-hidden />
             </Link>
           </Button>
           <Button variant="secondary" size="lg" asChild>

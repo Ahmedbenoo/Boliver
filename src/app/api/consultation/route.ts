@@ -13,7 +13,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: Persist to Supabase or send email notification
+    // TODO: Persist to database or send email notification
     return NextResponse.json({
       success: true,
       message: "Consultation request received",

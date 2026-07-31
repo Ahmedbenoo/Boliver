@@ -1,4 +1,4 @@
-import { getPortfolioProjects } from "@/lib/supabase/queries/portfolio";
+import { getPortfolioProjects } from "@/lib/data/queries/portfolio";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { PageHeader } from "@/components/layout/page-header";
 import { SectionWrapper } from "@/components/layout/section-wrapper";

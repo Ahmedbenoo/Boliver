@@ -18,7 +18,7 @@ components/
 
 - **Server Components** by default — add `"use client"` only when needed
 - Section components accept typed `data` props from `@/types`
-- Use `@/lib/data/*` for static fallbacks, `@/lib/supabase/queries/*` in pages
+- Use `@/lib/data/*` and `@/lib/data/queries/*` for page content
 - Animations via Framer Motion — import variants from `@/lib/animations/variants`
 
 ## Phase Status

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getProjectBySlug } from "@/lib/supabase/queries/portfolio";
+import { getProjectBySlug } from "@/lib/data/queries/portfolio";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { routes } from "@/lib/constants/routes";
 import { formatDate } from "@/lib/utils";

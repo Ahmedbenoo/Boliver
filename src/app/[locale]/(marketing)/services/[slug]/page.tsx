@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Check } from "lucide-react";
-import { getServiceBySlug } from "@/lib/supabase/queries/services";
+import { getServiceBySlug } from "@/lib/data/queries/services";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { routes } from "@/lib/constants/routes";
 import { Breadcrumbs, PageHeader } from "@/components/layout/page-header";

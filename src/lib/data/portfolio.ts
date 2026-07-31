@@ -10,7 +10,7 @@ export const portfolioData: PortfolioProject[] = [
     excerpt: "A HIPAA-ready patient portal with telehealth, scheduling, and AI triage.",
     coverImage: "/images/portfolio/placeholder.svg",
     gallery: ["/images/portfolio/placeholder.svg"],
-    technologies: ["Next.js", "Supabase", "OpenAI"],
+    technologies: ["Next.js", "PostgreSQL", "OpenAI"],
     results: [
       { metric: "Patient onboarding", value: "-60% time" },
       { metric: "Support tickets", value: "-35%" },

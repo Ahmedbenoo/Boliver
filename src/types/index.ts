@@ -23,5 +23,3 @@ export type {
   Testimonial,
   WhyFeature,
 } from "./content";
-
-export type { Database, Json, Tables, TablesInsert, TablesUpdate } from "./supabase";
