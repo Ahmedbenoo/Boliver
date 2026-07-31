@@ -17,7 +17,7 @@ export function createPageMetadata({
   path = "",
   image = "/images/og/default.jpg",
   noIndex = false,
-  locale = "en",
+  locale = "ar",
 }: PageMetadataOptions): Metadata {
   const localizedPath = `/${locale}${path === "/" ? "" : path}`;
   const url = `${siteConfig.url}${localizedPath}`;

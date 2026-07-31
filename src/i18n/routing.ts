@@ -7,7 +7,7 @@ export const routing = defineRouting({
   locales,
   defaultLocale: "ar",
   localePrefix: "always",
-  localeDetection: true,
+  localeDetection: false,
 });
 
 export const localeNames: Record<Locale, string> = {
