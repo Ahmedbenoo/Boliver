@@ -48,8 +48,8 @@ export function Header() {
       )}
     >
       <Container>
-        <div className="grid h-16 grid-cols-[auto_1fr_auto] items-center gap-4 md:h-20">
-          <BrandLogo size="md" priority className="justify-self-start" />
+        <div className="flex h-16 items-center justify-between gap-2 lg:grid lg:h-20 lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-4">
+          <BrandLogo size="md" priority className="shrink-0 justify-self-start" />
 
           <nav
             className="hidden items-center justify-center gap-6 lg:flex xl:gap-8"
@@ -71,7 +71,7 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="hidden items-center justify-self-end gap-2 md:flex">
+          <div className="hidden items-center justify-self-end gap-2 lg:flex">
             <LocaleSwitcher />
             <ThemeToggle />
             <Button variant="secondary" size="sm" asChild>
@@ -82,9 +82,7 @@ export function Header() {
             </Button>
           </div>
 
-          <div className="flex items-center justify-self-end gap-2 md:hidden">
-            <LocaleSwitcher />
-            <ThemeToggle />
+          <div className="flex shrink-0 items-center gap-0.5 lg:hidden" dir="ltr">
             <button
               type="button"
               className="inline-flex items-center justify-center rounded-lg p-2 text-foreground"
@@ -94,6 +92,8 @@ export function Header() {
             >
               {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
+            <ThemeToggle />
+            <LocaleSwitcher />
           </div>
         </div>
       </Container>

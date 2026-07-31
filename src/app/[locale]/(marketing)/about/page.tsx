@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowLabel } from "@/components/shared/arrow-label";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { routes } from "@/lib/constants/routes";
 import { teamData, whyBoliveerData } from "@/lib/data";
@@ -45,7 +45,7 @@ export default function AboutPage() {
             </p>
             <Button className="mt-8" asChild>
               <Link href={routes.bookConsultation}>
-                Work With Us <ArrowRight className="h-4 w-4" />
+                <ArrowLabel>Work With Us</ArrowLabel>
               </Link>
             </Button>
           </div>

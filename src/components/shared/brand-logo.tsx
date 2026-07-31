@@ -1,8 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
-import { useTheme } from "next-themes";
 import { Link } from "@/i18n/navigation";
 import { siteConfig } from "@/lib/constants/site";
 import { cn } from "@/lib/utils";
@@ -10,8 +6,8 @@ import logoLight from "@/components/shared/logo2.png";
 import logoDark from "@/components/shared/logo3.png";
 
 const sizeMap = {
-  sm: "max-h-9",
-  md: "max-h-14 object-start md:max-h-11",
+  sm: "max-h-8 max-w-[6.5rem] object-start md:max-h-9 md:max-w-none",
+  md: "max-h-8 max-w-[7rem] object-start md:max-h-11 md:max-w-none",
   lg: "max-h-14 object-start md:max-h-[4.5rem]",
 } as const;
 
@@ -28,24 +24,30 @@ export function BrandLogo({
   priority = false,
   className,
 }: BrandLogoProps) {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
-  const isDark = !mounted ? true : resolvedTheme === "dark";
-  const logoSrc = isDark ? logoDark : logoLight;
+  const imageClassName = cn("h-auto w-auto object-contain", sizeMap[size], className);
 
   const mark = (
-    <Image
-      src={logoSrc}
-      alt={siteConfig.name}
-      width={logoLight.width}
-      height={logoLight.height}
-      priority={priority}
-      sizes="(max-width: 768px) 180px, 220px"
-      className={cn("h-auto w-auto object-contain", sizeMap[size], className)}
-    />
+    <span className="relative inline-flex shrink-0">
+      <Image
+        src={logoLight}
+        alt={siteConfig.name}
+        width={logoLight.width}
+        height={logoLight.height}
+        priority={priority}
+        sizes="(max-width: 768px) 112px, 220px"
+        className={cn(imageClassName, "dark:hidden")}
+      />
+      <Image
+        src={logoDark}
+        alt=""
+        aria-hidden
+        width={logoDark.width}
+        height={logoDark.height}
+        priority={priority}
+        sizes="(max-width: 768px) 112px, 220px"
+        className={cn(imageClassName, "hidden dark:block")}
+      />
+    </span>
   );
 
   if (!linked) return mark;

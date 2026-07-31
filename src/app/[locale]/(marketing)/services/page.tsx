@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowLabel } from "@/components/shared/arrow-label";
 import { getServices } from "@/lib/data/queries/services";
 import { createPageMetadata } from "@/lib/seo/metadata";
 import { routes } from "@/lib/constants/routes";
@@ -47,9 +47,9 @@ export default async function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <span className="mt-4 inline-flex items-center gap-1 text-sm text-accent">
-                    Learn more <ArrowRight className="h-4 w-4" />
-                  </span>
+                  <ArrowLabel className="mt-4 gap-1 text-sm text-accent">
+                    Learn more
+                  </ArrowLabel>
                 </GlassCard>
               </Link>
             </AnimatedItem>

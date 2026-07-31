@@ -1,6 +1,5 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import type { PortfolioProject } from "@/types";
 import { formatDate } from "@/lib/utils";
@@ -9,6 +8,7 @@ import { SectionHeading } from "@/components/shared/section-heading";
 import { AnimatedSection, AnimatedItem } from "@/components/shared/animated-section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ArrowLabel } from "@/components/shared/arrow-label";
 
 interface PortfolioSectionProps {
   data: PortfolioProject[];
@@ -57,7 +57,7 @@ export async function PortfolioSection({ data }: PortfolioSectionProps) {
       <div className="mt-10 text-center">
         <Button variant="secondary" asChild>
           <Link href="/portfolio">
-            {tc("viewAllProjects")} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+            <ArrowLabel>{tc("viewAllProjects")}</ArrowLabel>
           </Link>
         </Button>
       </div>

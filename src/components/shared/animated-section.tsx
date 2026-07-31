@@ -1,25 +1,54 @@
-/** Lightweight reveal — CSS only, no Framer Motion */
+"use client";
+
+import type { CSSProperties, ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import {
+  ScrollReveal,
+  ScrollRevealGroup,
+  type ScrollRevealVariant,
+} from "@/components/shared/scroll-reveal";
 
 interface AnimatedSectionProps {
-  children: React.ReactNode;
+  children: ReactNode;
   stagger?: boolean;
   className?: string;
+  variant?: ScrollRevealVariant;
 }
 
 export function AnimatedSection({
   children,
+  stagger = false,
   className,
+  variant = "fade-up",
 }: AnimatedSectionProps) {
-  return <div className={cn("section-reveal", className)}>{children}</div>;
+  if (stagger) {
+    return <ScrollRevealGroup className={className}>{children}</ScrollRevealGroup>;
+  }
+
+  return (
+    <ScrollReveal className={className} variant={variant}>
+      {children}
+    </ScrollReveal>
+  );
 }
 
-export function AnimatedItem({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
+interface AnimatedItemProps {
+  children: ReactNode;
   className?: string;
-}) {
-  return <div className={className}>{children}</div>;
+  index?: number;
+}
+
+export function AnimatedItem({ children, className, index }: AnimatedItemProps) {
+  return (
+    <div
+      className={cn("scroll-reveal-item", className)}
+      style={
+        index !== undefined
+          ? ({ "--item-index": index } as CSSProperties)
+          : undefined
+      }
+    >
+      {children}
+    </div>
+  );
 }

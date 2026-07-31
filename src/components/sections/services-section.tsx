@@ -1,10 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight } from "lucide-react";
+import { ArrowLabel } from "@/components/shared/arrow-label";
 import type { Service } from "@/types";
 import { SectionWrapper } from "@/components/layout/section-wrapper";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { AnimatedSection, AnimatedItem } from "@/components/shared/animated-section";
+import { ScrollReveal } from "@/components/shared/scroll-reveal";
 import { DynamicIcon } from "@/components/shared/dynamic-icon";
 import { GlassCard } from "@/components/shared/glass-card";
 import { Button } from "@/components/ui/button";
@@ -40,21 +41,21 @@ export async function ServicesSection({ data }: ServicesSectionProps) {
                     </li>
                   ))}
                 </ul>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm text-accent opacity-0 transition-opacity group-hover:opacity-100">
-                  {tc("learnMore")} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
-                </span>
+                <ArrowLabel className="mt-4 gap-1 text-sm text-accent opacity-0 transition-opacity group-hover:opacity-100">
+                  {tc("learnMore")}
+                </ArrowLabel>
               </GlassCard>
             </Link>
           </AnimatedItem>
         ))}
       </AnimatedSection>
-      <div className="mt-10 text-center">
+      <ScrollReveal variant="fade-up" delay={120} className="mt-10 text-center">
         <Button variant="secondary" asChild>
           <Link href="/services">
-            {tc("viewAllServices")} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+            <ArrowLabel>{tc("viewAllServices")}</ArrowLabel>
           </Link>
         </Button>
-      </div>
+      </ScrollReveal>
     </SectionWrapper>
   );
 }

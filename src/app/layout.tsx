@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { cookies, headers } from "next/headers";
 import { Inter, Syne, Cairo } from "next/font/google";
+import { localeDirection, routing, type Locale } from "@/i18n/routing";
 import { defaultMetadata } from "@/lib/seo/metadata";
 import { organizationSchema, websiteSchema } from "@/lib/seo/json-ld";
 import "./globals.css";
@@ -27,17 +29,50 @@ const cairo = Cairo({
 
 export const metadata: Metadata = defaultMetadata;
 
-export default function RootLayout({
+async function getHtmlLocale(): Promise<Locale> {
+  const headersList = await headers();
+  const fromMiddleware = headersList.get("x-locale");
+
+  if (fromMiddleware === "ar" || fromMiddleware === "en") {
+    return fromMiddleware;
+  }
+
+  const cookieStore = await cookies();
+  const cookieLocale = cookieStore.get("NEXT_LOCALE")?.value;
+
+  if (cookieLocale === "ar" || cookieLocale === "en") {
+    return cookieLocale;
+  }
+
+  return routing.defaultLocale;
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getHtmlLocale();
+  const dir = localeDirection[locale];
+
   return (
     <html
+      lang={locale}
+      dir={dir}
       suppressHydrationWarning
       className={`${inter.variable} ${syne.variable} ${cairo.variable} h-full`}
     >
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("theme");var d=t==="dark"||(t==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches)||(!t&&true);document.documentElement.classList.toggle("dark",d);}catch(e){}})();`,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var m=location.pathname.match(/^\\/(ar|en)(?=\\/|$)/);if(m){var l=m[1];document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr";}}catch(e){}})();`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

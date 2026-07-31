@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight, Clock } from "lucide-react";
+import { Clock } from "lucide-react";
 import Image from "next/image";
 import type { BlogPost } from "@/types";
 import { formatDate } from "@/lib/utils";
@@ -9,6 +9,7 @@ import { SectionHeading } from "@/components/shared/section-heading";
 import { AnimatedSection, AnimatedItem } from "@/components/shared/animated-section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ArrowLabel } from "@/components/shared/arrow-label";
 
 interface BlogSectionProps {
   data: BlogPost[];
@@ -64,7 +65,7 @@ export async function BlogSection({ data }: BlogSectionProps) {
       <div className="mt-10 text-center">
         <Button variant="secondary" asChild>
           <Link href="/blog">
-            {tc("readAllArticles")} <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+            <ArrowLabel>{tc("readAllArticles")}</ArrowLabel>
           </Link>
         </Button>
       </div>
