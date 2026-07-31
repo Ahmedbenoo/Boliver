@@ -13,7 +13,7 @@ interface AppProvidersProps {
 
 export function AppProviders({ children, locale, messages }: AppProvidersProps) {
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider locale={locale} messages={messages} timeZone="Africa/Cairo">
       <ThemeProvider>
         <LocaleAttributes />
         {children}
