@@ -1,0 +1,60 @@
+import type { ProcessStep } from "@/types";
+
+export const processData: ProcessStep[] = [
+  {
+    id: "1",
+    slug: "idea",
+    title: "Idea",
+    description: "We explore your vision, goals, and market opportunity.",
+    icon: "lightbulb",
+    sortOrder: 1,
+  },
+  {
+    id: "2",
+    slug: "planning",
+    title: "Planning",
+    description: "Roadmaps, scope, timelines, and technical architecture.",
+    icon: "map",
+    sortOrder: 2,
+  },
+  {
+    id: "3",
+    slug: "design",
+    title: "Design",
+    description: "Premium UI/UX, wireframes, and interactive prototypes.",
+    icon: "pen-tool",
+    sortOrder: 3,
+  },
+  {
+    id: "4",
+    slug: "development",
+    title: "Development",
+    description: "Agile sprints with clean, scalable, production-ready code.",
+    icon: "code-2",
+    sortOrder: 4,
+  },
+  {
+    id: "5",
+    slug: "testing",
+    title: "Testing",
+    description: "QA, performance testing, and cross-device validation.",
+    icon: "shield-check",
+    sortOrder: 5,
+  },
+  {
+    id: "6",
+    slug: "launch",
+    title: "Launch",
+    description: "Deployment, monitoring, and go-live support.",
+    icon: "rocket",
+    sortOrder: 6,
+  },
+  {
+    id: "7",
+    slug: "growth",
+    title: "Growth",
+    description: "Optimization, analytics, and continuous improvement.",
+    icon: "trending-up",
+    sortOrder: 7,
+  },
+];

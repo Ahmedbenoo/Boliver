@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0f172a"/>
+  <rect x="40" y="40" width="720" height="520" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="400" y="300" text-anchor="middle" fill="#64748b" font-family="system-ui" font-size="16">Portfolio Image</text>
+</svg>

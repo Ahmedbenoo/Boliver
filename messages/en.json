@@ -1,0 +1,155 @@
+{
+  "common": {
+    "contact": "Contact",
+    "bookConsultation": "Book Consultation",
+    "bookFreeConsultation": "Book Free Consultation",
+    "viewPortfolio": "View Portfolio",
+    "viewAllServices": "View All Services",
+    "viewAllProjects": "View All Projects",
+    "readAllArticles": "Read All Articles",
+    "learnMore": "Learn more",
+    "contactUs": "Contact Us",
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "loading": "Loading",
+    "tryAgain": "Try again",
+    "backToHome": "Back to Home",
+    "themeLight": "Light mode",
+    "themeDark": "Dark mode",
+    "language": "Language"
+  },
+  "nav": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "blog": "Blog",
+    "careers": "Careers",
+    "contact": "Contact",
+    "bookConsultation": "Book Consultation",
+    "webDevelopment": "Web Development",
+    "mobileApps": "Mobile Apps",
+    "aiSolutions": "AI Solutions",
+    "digitalMarketing": "Digital Marketing",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "legal": "Legal",
+    "copyright": "All rights reserved."
+  },
+  "sections": {
+    "clients": {
+      "eyebrow": "Trusted By",
+      "title": "Brands That Scale With Us",
+      "description": "We partner with ambitious companies across healthcare, e-commerce, real estate, and more."
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "End-to-End Digital Solutions",
+      "description": "From strategy to launch, we deliver premium software, design, and growth systems tailored to your business."
+    },
+    "process": {
+      "eyebrow": "Our Process",
+      "title": "From Idea to Growth",
+      "description": "A proven 7-step framework that keeps your project on track and delivers results."
+    },
+    "portfolio": {
+      "eyebrow": "Portfolio",
+      "title": "Projects That Drive Results",
+      "description": "Real outcomes for real businesses — explore our latest case studies."
+    },
+    "why": {
+      "eyebrow": "Why Boliveer",
+      "title": "Your Partner for Digital Excellence",
+      "description": "Experience, speed, and technology — everything you need to transform your business."
+    },
+    "testimonials": {
+      "eyebrow": "Testimonials",
+      "title": "What Our Clients Say",
+      "description": "Don't just take our word for it — hear from the teams we've helped grow.",
+      "videoLabel": "Video testimonial",
+      "playAria": "Play video testimonial from {name}"
+    },
+    "pricing": {
+      "eyebrow": "Pricing",
+      "title": "Transparent Plans for Every Stage",
+      "description": "Flexible packages designed for startups, growing businesses, and enterprise teams.",
+      "mostPopular": "Most Popular",
+      "perProject": "project",
+      "customPrice": "Custom quote"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Frequently Asked Questions",
+      "description": "Everything you need to know before starting your project."
+    },
+    "blog": {
+      "eyebrow": "Insights",
+      "title": "Latest Articles",
+      "description": "Thoughts on software, AI, design, and digital growth from the Boliveer team."
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Let's Build Something Great",
+      "description": "Tell us about your project. We'll respond within 24 hours with a tailored plan.",
+      "email": "Email",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "whatsappAction": "Chat on WhatsApp",
+      "location": "Location",
+      "mapReady": "Map integration ready",
+      "mapHint": "Connect Google Maps via CMS"
+    },
+    "cta": {
+      "title": "Ready to Build Something Great?",
+      "description": "Let's discuss your project and create a roadmap for success."
+    }
+  },
+  "forms": {
+    "name": "Name",
+    "email": "Email",
+    "company": "Company",
+    "phone": "Phone",
+    "message": "Message",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "successTitle": "Message sent successfully!",
+    "successBody": "We'll get back to you within 24 hours.",
+    "error": "Something went wrong. Please try again.",
+    "budget": "Budget",
+    "selectBudget": "Select budget range",
+    "budgetUnder50k": "Under EGP 50,000",
+    "budget50k150k": "EGP 50,000 – 150,000",
+    "budget150k400k": "EGP 150,000 – 400,000",
+    "budget400kPlus": "EGP 400,000+",
+    "budgetNotSure": "Not sure yet"
+  },
+  "portfolio": {
+    "all": "All",
+    "web": "Web",
+    "mobile": "Mobile",
+    "ai": "AI",
+    "ecommerce": "E-commerce",
+    "healthcare": "Healthcare",
+    "realEstate": "Real Estate",
+    "erpCrm": "ERP / CRM",
+    "empty": "No projects in this category yet."
+  },
+  "errors": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred while loading this page.",
+    "globalTitle": "Something went wrong",
+    "globalDescription": "Boliveer encountered an unexpected error. Please try again.",
+    "notFoundTitle": "Page not found",
+    "notFoundDescription": "The page you're looking for doesn't exist or has been moved."
+  },
+  "meta": {
+    "homeTitle": "Boliveer — Premium Software & Digital Transformation Agency",
+    "homeDescription": "Build world-class web apps, mobile solutions, AI systems, and digital experiences. Book a free consultation with Boliveer."
+  }
+}

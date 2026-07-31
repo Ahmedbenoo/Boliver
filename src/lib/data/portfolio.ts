@@ -1,0 +1,55 @@
+import type { PortfolioProject } from "@/types";
+
+export const portfolioData: PortfolioProject[] = [
+  {
+    id: "1",
+    slug: "novahealth-platform",
+    title: "NovaHealth Patient Portal",
+    client: "NovaHealth",
+    category: "healthcare",
+    excerpt: "A HIPAA-ready patient portal with telehealth, scheduling, and AI triage.",
+    coverImage: "/images/portfolio/placeholder.svg",
+    gallery: ["/images/portfolio/placeholder.svg"],
+    technologies: ["Next.js", "Supabase", "OpenAI"],
+    results: [
+      { metric: "Patient onboarding", value: "-60% time" },
+      { metric: "Support tickets", value: "-35%" },
+    ],
+    publishedAt: "2025-11-01",
+    featured: true,
+  },
+  {
+    id: "2",
+    slug: "urbaneats-ordering",
+    title: "UrbanEats Mobile Ordering",
+    client: "UrbanEats",
+    category: "e-commerce",
+    excerpt: "Multi-location restaurant ordering app with real-time kitchen sync.",
+    coverImage: "/images/portfolio/placeholder.svg",
+    gallery: ["/images/portfolio/placeholder.svg"],
+    technologies: ["React Native", "Node.js", "Stripe"],
+    results: [
+      { metric: "Online orders", value: "+78%" },
+      { metric: "Repeat customers", value: "+41%" },
+    ],
+    publishedAt: "2025-09-15",
+    featured: true,
+  },
+  {
+    id: "3",
+    slug: "propaxis-crm",
+    title: "PropAxis Real Estate CRM",
+    client: "PropAxis",
+    category: "real-estate",
+    excerpt: "Lead management CRM with property listings and automated follow-ups.",
+    coverImage: "/images/portfolio/placeholder.svg",
+    gallery: ["/images/portfolio/placeholder.svg"],
+    technologies: ["Laravel", "PostgreSQL", "AWS"],
+    results: [
+      { metric: "Lead response time", value: "-50%" },
+      { metric: "Closed deals", value: "+29%" },
+    ],
+    publishedAt: "2025-07-20",
+    featured: true,
+  },
+];

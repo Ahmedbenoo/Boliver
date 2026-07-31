@@ -1,0 +1,12 @@
+export { heroData } from "./hero";
+export { clientsData } from "./clients";
+export { servicesData } from "./services";
+export { processData } from "./process";
+export { portfolioData } from "./portfolio";
+export { whyBoliveerData } from "./why-boliveer";
+export { testimonialsData } from "./testimonials";
+export { pricingData } from "./pricing";
+export { faqsData } from "./faqs";
+export { blogData } from "./blog";
+export { teamData } from "./team";
+export { careersData } from "./careers";
